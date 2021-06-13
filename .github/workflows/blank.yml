@@ -36,4 +36,6 @@ jobs:
           echo test, and deploy your project.
 
       - name: Build RaspberryOS
-        run: ${PWD}/build-docker.sh
+        run: |
+          echo "IMG_NAME='Raspbian'" > config
+          ${PWD}/build-docker.sh
